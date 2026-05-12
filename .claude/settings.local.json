@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(composer require *)",
+      "PowerShell(composer show *)",
+      "PowerShell(cmd /c \"composer require filament/filament:^^4.1 -W 2>&1\" | Select-Object -Last 40)",
+      "PowerShell(composer update *)",
+      "PowerShell(\\(Get-Item D:\\\\code\\\\salesInvoiceApp\\\\plan.md\\).Length; \\(Get-Content D:\\\\code\\\\salesInvoiceApp\\\\plan.md | Measure-Object -Line\\).Lines)",
+      "PowerShell(php artisan migrate:fresh --seed 2>&1 | Select-Object -Last 60)",
+      "PowerShell(php artisan tinker --execute=\"echo 'customers='.App\\\\Models\\\\Customer::count\\(\\); echo ' items='.App\\\\Models\\\\Item::count\\(\\); echo ' headers='.App\\\\Models\\\\SalesHeader::count\\(\\); echo ' lines='.App\\\\Models\\\\SalesLine::count\\(\\); echo PHP_EOL; App\\\\Models\\\\SalesHeader::with\\('lines'\\)->get\\(\\)->each\\(fn\\(\\\\$h\\)=>print\\(\\\\$h->invoice_no.': '.\\\\$h->status.' total='.\\\\$h->total_amount.' lines='.\\\\$h->lines->count\\(\\).PHP_EOL\\)\\);\")",
+      "PowerShell(php artisan tinker --execute=\"require base_path\\('storage/app/verify_seed.php'\\);\")",
+      "PowerShell(php artisan tinker --execute=\"require base_path\\('storage/app/verify_post.php'\\);\")",
+      "PowerShell(php artisan view:clear 2>&1)",
+      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 80)"
+    ]
+  }
+}

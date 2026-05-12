@@ -16,6 +16,24 @@
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
+
+                <flux:sidebar.group :heading="__('Sales')" class="grid">
+                    <flux:sidebar.item icon="document-text" :href="route('sales.index')" :current="request()->routeIs('sales.*')" wire:navigate>
+                        {{ __('Sales invoices') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="check-circle" :href="route('sales-posted.index')" :current="request()->routeIs('sales-posted.*')" wire:navigate>
+                        {{ __('Posted invoices') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
+
+                <flux:sidebar.group :heading="__('Master data')" class="grid">
+                    <flux:sidebar.item icon="users" :href="route('customers.index')" :current="request()->routeIs('customers.*')" wire:navigate>
+                        {{ __('Customers') }}
+                    </flux:sidebar.item>
+                    <flux:sidebar.item icon="cube" :href="route('items.index')" :current="request()->routeIs('items.*')" wire:navigate>
+                        {{ __('Items') }}
+                    </flux:sidebar.item>
+                </flux:sidebar.group>
             </flux:sidebar.nav>
 
             <flux:spacer />
