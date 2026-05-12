@@ -13,7 +13,8 @@
       "PowerShell(php artisan view:clear 2>&1)",
       "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 80)",
       "PowerShell(php artisan optimize:clear 2>&1)",
-      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 5)"
+      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 5)",
+      "PowerShell(php artisan route:clear 2>&1)"
     ]
   }
 }
