@@ -5,6 +5,19 @@
         <!-- Session Status -->
         <x-auth-session-status class="text-center" :status="session('status')" />
 
+        @if (! app()->environment('production'))
+            <div class="rounded-lg border border-dashed border-zinc-300 bg-zinc-50 p-3 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+                <p class="font-semibold mb-1">{{ __('Demo credentials (seeded)') }}</p>
+                <dl class="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 font-mono text-xs">
+                    <dt class="text-zinc-500">{{ __('Email') }}</dt>
+                    <dd>test@example.com</dd>
+                    <dt class="text-zinc-500">{{ __('Password') }}</dt>
+                    <dd>password</dd>
+                </dl>
+                <p class="mt-2 text-xs text-zinc-500">{{ __('Run `php artisan migrate:fresh --seed` if these don\'t work.') }}</p>
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('login.store') }}" class="flex flex-col gap-6">
             @csrf
 

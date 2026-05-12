@@ -11,7 +11,9 @@
       "PowerShell(php artisan tinker --execute=\"require base_path\\('storage/app/verify_seed.php'\\);\")",
       "PowerShell(php artisan tinker --execute=\"require base_path\\('storage/app/verify_post.php'\\);\")",
       "PowerShell(php artisan view:clear 2>&1)",
-      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 80)"
+      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 80)",
+      "PowerShell(php artisan optimize:clear 2>&1)",
+      "PowerShell(php artisan test --filter=Sales 2>&1 | Select-Object -Last 5)"
     ]
   }
 }
